@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Ember.js - Ember.platform</title>
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link href="../../stylesheets/site.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="../../stylesheets/highlight.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="http://emberjs.com/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/javascripts/common-old-ie.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="../../javascripts/common-modern.js"></script>
+<!--<![endif]-->
+
+    
+    <script type="text/javascript" src="../../javascripts/api.js"></script>
+  
+  </head>
+
+  <body class="api api_classes api_classes_Ember">
+    <div id="header">
+      <div id="wrapper">
+        <a id="logo" href="/">&nbsp;</a>
+        
+
+        <div id="github">
+          <a href="https://github.com/emberjs/ember.js"><img src="../../images/fork-us.png">Fork Us!</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="content-wrapper">
+      
+      
+        <div id="sidebar">
+          
+    <ol id="toc-list">
+      <li class="level-1">
+        <a href="#">Projects</a>
+        <ol>
+          
+          <li class="level-3 sub-selected">
+            <a href="/api">Ember</a>
+          </li>
+          
+          <li class="level-3 ">
+            <a href="../data">Ember Data</a>
+          </li>
+          
+        </ol>
+      </li>
+
+      <li class="level-1"><a href="https://github.com/emberjs/ember.js/commit/" target="_blank"> Tag: </a></li>
+
+      
+          <li class="level-1 ">
+          
+        <a href="#">Modules</a>
+        
+          <ol class="">
+          
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../modules/ember.html">ember</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../modules/ember-application.html">ember-application</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../modules/ember-debug.html">ember-debug</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../modules/ember-handlebars.html">ember-handlebars</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../modules/ember-metal.html">ember-metal</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../modules/ember-routing.html">ember-routing</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../modules/ember-runtime.html">ember-runtime</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../modules/ember-states.html">ember-states</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../modules/ember-views.html">ember-views</a>
+            
+          </li>
+        
+          
+        
+          </ol>
+        
+      
+          </li>
+        
+
+      
+          <li class="level-1 selected">
+          
+        <a href="#">Namespaces</a>
+        
+          <ol class="selected">
+          
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.html">Ember</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Instrumentation.html">Ember.Instrumentation</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Location.html">Ember.Location</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.String.html">Ember.String</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 sub-selected">
+          
+              <a href="Ember.platform.html">Ember.platform</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.run.html">Ember.run</a>
+            
+          </li>
+        
+          
+        
+          </ol>
+        
+      
+          </li>
+        
+
+      
+          <li class="level-1 ">
+          
+        <a href="#">Classes</a>
+        
+          <ol class="">
+          
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Application.html">Ember.Application</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Array.html">Ember.Array</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.ArrayController.html">Ember.ArrayController</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.ArrayProxy.html">Ember.ArrayProxy</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Binding.html">Ember.Binding</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Button.html">Ember.Button</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Checkbox.html">Ember.Checkbox</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.CollectionView.html">Ember.CollectionView</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Comparable.html">Ember.Comparable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.ComputedProperty.html">Ember.ComputedProperty</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.ContainerView.html">Ember.ContainerView</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Controller.html">Ember.Controller</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.ControllerMixin.html">Ember.ControllerMixin</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Copyable.html">Ember.Copyable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.CoreObject.html">Ember.CoreObject</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Deferred.html">Ember.Deferred</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Descriptor.html">Ember.Descriptor</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.EachProxy.html">Ember.EachProxy</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Enumerable.html">Ember.Enumerable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Error.html">Ember.Error</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.EventDispatcher.html">Ember.EventDispatcher</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Evented.html">Ember.Evented</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Freezable.html">Ember.Freezable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Handlebars.html">Ember.Handlebars</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Handlebars.helpers.html">Ember.Handlebars.helpers</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.HashLocation.html">Ember.HashLocation</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.HistoryLocation.html">Ember.HistoryLocation</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Logger.html">Ember.Logger</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Map.html">Ember.Map</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.MapWithDefault.html">Ember.MapWithDefault</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Mixin.html">Ember.Mixin</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.MutableArray.html">Ember.MutableArray</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.MutableEnumerable.html">Ember.MutableEnumerable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Namespace.html">Ember.Namespace</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.NativeArray.html">Ember.NativeArray</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.NoneLocation.html">Ember.NoneLocation</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Object.html">Ember.Object</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.ObjectController.html">Ember.ObjectController</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.ObjectProxy.html">Ember.ObjectProxy</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Observable.html">Ember.Observable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.OrderedSet.html">Ember.OrderedSet</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.RenderBuffer.html">Ember.RenderBuffer</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Route.html">Ember.Route</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Router.html">Ember.Router</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.RunLoop.html">Ember.RunLoop</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Select.html">Ember.Select</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.Set.html">Ember.Set</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.SortableMixin.html">Ember.SortableMixin</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.State.html">Ember.State</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.StateManager.html">Ember.StateManager</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.TargetActionSupport.html">Ember.TargetActionSupport</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.TextArea.html">Ember.TextArea</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.TextField.html">Ember.TextField</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.TextSupport.html">Ember.TextSupport</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember.View.html">Ember.View</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember._HandlebarsBoundView.html">Ember._HandlebarsBoundView</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember._Metamorph.html">Ember._Metamorph</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember._MetamorphView.html">Ember._MetamorphView</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Ember._SimpleMetamorphView.html">Ember._SimpleMetamorphView</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Function.html">Function</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="String.html">String</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="Transition.html">Transition</a>
+            
+          </li>
+        
+          
+        
+          </ol>
+        
+      
+          </li>
+        
+  
+          <div id="back-to-top"><a id="back-top-top" href="#">⬆ Back to Top</a></div>
+        </ol></div>
+      
+      <div id="content" class="has-sidebar">
+          
+
+  
+  <h1 class="api-header">
+  Ember.platform Namespace
+  
+    <a class="edit-page" target="_blank" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/platform.js#L118">packages/ember-metal/lib/platform.js:118</a>
+  
+</h1>
+
+<hr>
+
+
+<div class="class-info">
+  
+
+  
+
+  
+    <p>Defined in: <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/platform.js#L118">packages/ember-metal/lib/platform.js:118</a></p>
+  
+
+  
+    <p>Module: <a href="../modules/ember-metal.html">ember-metal</a></p>
+  
+</div>
+
+  <div class="description">
+    <p>Platform specific methods and feature detectors needed by the framework.</p>
+
+  </div>
+
+
+  <div class="tabs">
+    <ul>
+      <li><a href="#index">Index</a></li>
+      
+        <li><a href="#methods">Methods</a></li>
+      
+        <li><a href="#properties">Properties</a></li>
+      
+    </ul>
+    <div class="pane" id="index">
+      <div id="api-options">
+  Show:
+  <label>
+    <input type="checkbox" data-type="inherited" checked="">
+    Inherited
+  </label>
+  <label>
+    <input type="checkbox" data-type="protected">
+    Protected
+  </label>
+  <label>
+    <input type="checkbox" data-type="private">
+    Private
+  </label>
+  <label>
+    <input type="checkbox" data-type="deprecated">
+    Deprecated
+  </label>
+</div>
+
+      
+        <p></p><h2>Methods</h2><p></p>
+        <ul class="index-list">
+          
+            <li class="method ">
+              <a href="#method_addBeforeObserver">addBeforeObserver</a>
+            </li>
+          
+            <li class="method ">
+              <a href="#method_addObserver">addObserver</a>
+            </li>
+          
+            <li class="method ">
+              <a href="#method_beginPropertyChanges">beginPropertyChanges</a>
+            </li>
+          
+            <li class="method ">
+              <a href="#method_changeProperties">changeProperties</a>
+            </li>
+          
+            <li class="method ">
+              <a href="#method_defineProperty">defineProperty</a>
+            </li>
+          
+            <li class="method ">
+              <a href="#method_endPropertyChanges">endPropertyChanges</a>
+            </li>
+          
+            <li class="method ">
+              <a href="#method_removeBeforeObserver">removeBeforeObserver</a>
+            </li>
+          
+            <li class="method ">
+              <a href="#method_removeObserver">removeObserver</a>
+            </li>
+          
+            <li class="method ">
+              <a href="#method_setProperties">setProperties</a>
+            </li>
+          
+        </ul>
+      
+        <p></p><h2>Properties</h2><p></p>
+        <ul class="index-list">
+          
+            <li class="property ">
+              <a href="#property_hasPropertyAccessors">hasPropertyAccessors</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  
+    <div class="pane" id="methods">
+      <div id="api-options">
+  Show:
+  <label>
+    <input type="checkbox" data-type="inherited" checked="">
+    Inherited
+  </label>
+  <label>
+    <input type="checkbox" data-type="protected">
+    Protected
+  </label>
+  <label>
+    <input type="checkbox" data-type="private">
+    Private
+  </label>
+  <label>
+    <input type="checkbox" data-type="deprecated">
+    Deprecated
+  </label>
+</div>
+
+      
+        
+<div id="method_addBeforeObserver" class="method  item-entry">
+  <h3 data-id="method_addBeforeObserver" class="name anchorable-toc"><code>addBeforeObserver</code></h3>
+  <span class="args">
+    (obj, path, targetOrMethod, method)
+  </span>
+
+
+
+
+
+
+
+
+
+  <div class="meta">
+      
+        
+          
+            Defined in
+          
+        
+      
+      <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/observer.js#L178">packages/ember-metal/lib/observer.js:178</a>
+
+    
+
+    
+  </div>
+
+  
+
+  <p>
+    
+  </p>
+
+  
+
+  
+    <div class="params">
+      <h3>Parameters:</h3>
+
+      <dl>
+        
+          <dt><strong>obj</strong> <span class="type"></span></dt>
+          <dd></dd>
+        
+          <dt><strong>path</strong> <span class="type"><a href="String.html">String</a></span></dt>
+          <dd></dd>
+        
+          <dt><strong>targetOrMethod</strong> <span class="type">Object|Function</span></dt>
+          <dd></dd>
+        
+          <dt><strong>method</strong> <span class="type">Function|String</span></dt>
+          <dd></dd>
+        
+      </dl>
+    </div>
+  
+
+  
+</div>
+
+      
+        
+<div id="method_addObserver" class="method  item-entry">
+  <h3 data-id="method_addObserver" class="name anchorable-toc"><code>addObserver</code></h3>
+  <span class="args">
+    (obj, path, targetOrMethod, method)
+  </span>
+
+
+
+
+
+
+
+
+
+  <div class="meta">
+      
+        
+          
+            Defined in
+          
+        
+      
+      <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/observer.js#L148">packages/ember-metal/lib/observer.js:148</a>
+
+    
+
+    
+  </div>
+
+  
+
+  <p>
+    
+  </p>
+
+  
+
+  
+    <div class="params">
+      <h3>Parameters:</h3>
+
+      <dl>
+        
+          <dt><strong>obj</strong> <span class="type"></span></dt>
+          <dd></dd>
+        
+          <dt><strong>path</strong> <span class="type"><a href="String.html">String</a></span></dt>
+          <dd></dd>
+        
+          <dt><strong>targetOrMethod</strong> <span class="type">Object|Function</span></dt>
+          <dd></dd>
+        
+          <dt><strong>method</strong> <span class="type">Function|String</span></dt>
+          <dd></dd>
+        
+      </dl>
+    </div>
+  
+
+  
+</div>
+
+      
+        
+<div id="method_beginPropertyChanges" class="method  item-entry">
+  <h3 data-id="method_beginPropertyChanges" class="name anchorable-toc"><code>beginPropertyChanges</code></h3>
+
+
+
+
+
+
+
+
+
+  <div class="meta">
+      
+        
+          
+            Defined in
+          
+        
+      
+      <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/observer.js#L81">packages/ember-metal/lib/observer.js:81</a>
+
+    
+
+    
+  </div>
+
+  
+
+  <p>
+    
+  </p>
+
+  
+
+  
+
+  
+</div>
+
+      
+        
+<div id="method_changeProperties" class="method  item-entry">
+  <h3 data-id="method_changeProperties" class="name anchorable-toc"><code>changeProperties</code></h3>
+  <span class="args">
+    (callback, binding)
+  </span>
+
+
+
+
+
+
+
+
+
+  <div class="meta">
+      
+        
+          
+            Defined in
+          
+        
+      
+      <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/observer.js#L100">packages/ember-metal/lib/observer.js:100</a>
+
+    
+
+    
+  </div>
+
+  
+    <div class="description">
+      <p>Make a series of property changes together in an
+exception-safe way.</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tbody><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre>Ember.changeProperties(<span class="keyword">function</span>() {
+  obj1.set(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>, mayBlowUpWhenSet);
+  obj2.set(<span class="string"><span class="delimiter">'</span><span class="content">bar</span><span class="delimiter">'</span></span>, baz);
+});
+</pre></td>
+</tr></tbody></table>
+</div></div>
+    </div>
+  
+
+  <p>
+    
+  </p>
+
+  
+
+  
+    <div class="params">
+      <h3>Parameters:</h3>
+
+      <dl>
+        
+          <dt><strong>callback</strong> <span class="type"><a href="Function.html">Function</a></span></dt>
+          <dd></dd>
+        
+          <dt><strong>binding</strong> <span class="type"></span></dt>
+          <dd></dd>
+        
+      </dl>
+    </div>
+  
+
+  
+</div>
+
+      
+        
+<div id="method_defineProperty" class="method  item-entry">
+  <h3 data-id="method_defineProperty" class="name anchorable-toc"><code>defineProperty</code></h3>
+  <span class="args">
+    (obj, keyName, desc)
+  </span>
+
+  <span class="type">Void</span>
+
+
+
+
+
+
+
+
+  <div class="meta">
+      
+        
+          
+            Defined in
+          
+        
+      
+      <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/platform.js#L123">packages/ember-metal/lib/platform.js:123</a>
+
+    
+
+    
+  </div>
+
+  
+    <div class="description">
+      <p>Identical to <code>Object.defineProperty()</code>. Implements as much functionality
+as possible if not available natively.</p>
+
+    </div>
+  
+
+  <p>
+    
+  </p>
+
+  
+
+  
+    <div class="params">
+      <h3>Parameters:</h3>
+
+      <dl>
+        
+          <dt><strong>obj</strong> <span class="type">Object</span></dt>
+          <dd>The object to modify</dd>
+        
+          <dt><strong>keyName</strong> <span class="type"><a href="String.html">String</a></span></dt>
+          <dd>property name to modify</dd>
+        
+          <dt><strong>desc</strong> <span class="type">Object</span></dt>
+          <dd>descriptor hash</dd>
+        
+      </dl>
+    </div>
+  
+
+  
+    <div class="return">
+      <h3>Returns:</h3>
+      <dl>
+        <dt><span class="type">Void</span>
+        </dt><dd> </dd>
+      </dl>
+    </div>
+  
+</div>
+
+      
+        
+<div id="method_endPropertyChanges" class="method  item-entry">
+  <h3 data-id="method_endPropertyChanges" class="name anchorable-toc"><code>endPropertyChanges</code></h3>
+
+
+
+
+
+
+
+
+
+  <div class="meta">
+      
+        
+          
+            Defined in
+          
+        
+      
+      <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/observer.js#L89">packages/ember-metal/lib/observer.js:89</a>
+
+    
+
+    
+  </div>
+
+  
+
+  <p>
+    
+  </p>
+
+  
+
+  
+
+  
+</div>
+
+      
+        
+<div id="method_removeBeforeObserver" class="method  item-entry">
+  <h3 data-id="method_removeBeforeObserver" class="name anchorable-toc"><code>removeBeforeObserver</code></h3>
+  <span class="args">
+    (obj, path, targetOrMethod, method)
+  </span>
+
+
+
+
+
+
+
+
+
+  <div class="meta">
+      
+        
+          
+            Defined in
+          
+        
+      
+      <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/observer.js#L219">packages/ember-metal/lib/observer.js:219</a>
+
+    
+
+    
+  </div>
+
+  
+
+  <p>
+    
+  </p>
+
+  
+
+  
+    <div class="params">
+      <h3>Parameters:</h3>
+
+      <dl>
+        
+          <dt><strong>obj</strong> <span class="type"></span></dt>
+          <dd></dd>
+        
+          <dt><strong>path</strong> <span class="type"><a href="String.html">String</a></span></dt>
+          <dd></dd>
+        
+          <dt><strong>targetOrMethod</strong> <span class="type">Object|Function</span></dt>
+          <dd></dd>
+        
+          <dt><strong>method</strong> <span class="type">Function|String</span></dt>
+          <dd></dd>
+        
+      </dl>
+    </div>
+  
+
+  
+</div>
+
+      
+        
+<div id="method_removeObserver" class="method  item-entry">
+  <h3 data-id="method_removeObserver" class="name anchorable-toc"><code>removeObserver</code></h3>
+  <span class="args">
+    (obj, path, targetOrMethod, method)
+  </span>
+
+
+
+
+
+
+
+
+
+  <div class="meta">
+      
+        
+          
+            Defined in
+          
+        
+      
+      <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/observer.js#L165">packages/ember-metal/lib/observer.js:165</a>
+
+    
+
+    
+  </div>
+
+  
+
+  <p>
+    
+  </p>
+
+  
+
+  
+    <div class="params">
+      <h3>Parameters:</h3>
+
+      <dl>
+        
+          <dt><strong>obj</strong> <span class="type"></span></dt>
+          <dd></dd>
+        
+          <dt><strong>path</strong> <span class="type"><a href="String.html">String</a></span></dt>
+          <dd></dd>
+        
+          <dt><strong>targetOrMethod</strong> <span class="type">Object|Function</span></dt>
+          <dd></dd>
+        
+          <dt><strong>method</strong> <span class="type">Function|String</span></dt>
+          <dd></dd>
+        
+      </dl>
+    </div>
+  
+
+  
+</div>
+
+      
+        
+<div id="method_setProperties" class="method  item-entry">
+  <h3 data-id="method_setProperties" class="name anchorable-toc"><code>setProperties</code></h3>
+  <span class="args">
+    (target, properties)
+  </span>
+
+  <span class="type"></span>
+
+
+
+
+
+
+
+
+  <div class="meta">
+      
+        
+          
+            Defined in
+          
+        
+      
+      <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/observer.js#L120">packages/ember-metal/lib/observer.js:120</a>
+
+    
+
+    
+  </div>
+
+  
+    <div class="description">
+      <p>Set a list of properties on an object. These properties are set inside
+a single <code>beginPropertyChanges</code> and <code>endPropertyChanges</code> batch, so
+observers will be buffered.</p>
+
+    </div>
+  
+
+  <p>
+    
+  </p>
+
+  
+
+  
+    <div class="params">
+      <h3>Parameters:</h3>
+
+      <dl>
+        
+          <dt><strong>target</strong> <span class="type"></span></dt>
+          <dd></dd>
+        
+          <dt><strong>properties</strong> <span class="type">Hash</span></dt>
+          <dd></dd>
+        
+      </dl>
+    </div>
+  
+
+  
+    <div class="return">
+      <h3>Returns:</h3>
+      <dl>
+        <dt><span class="type"></span>
+        </dt><dd> target</dd>
+      </dl>
+    </div>
+  
+</div>
+
+      
+    </div>
+  
+    <div class="pane" id="properties">
+      <div id="api-options">
+  Show:
+  <label>
+    <input type="checkbox" data-type="inherited" checked="">
+    Inherited
+  </label>
+  <label>
+    <input type="checkbox" data-type="protected">
+    Protected
+  </label>
+  <label>
+    <input type="checkbox" data-type="private">
+    Private
+  </label>
+  <label>
+    <input type="checkbox" data-type="deprecated">
+    Deprecated
+  </label>
+</div>
+
+      
+        
+<div id="property_hasPropertyAccessors" class="property  item-entry">
+  <h3 data-id="property_hasPropertyAccessors" class="name anchorable-toc"><code>hasPropertyAccessors</code></h3>
+
+
+
+
+
+  <span class="flag final">constant</span>
+
+
+
+
+  <div class="meta">
+      
+        
+          
+            Defined in
+          
+        
+      
+      <a class="api-file-link" href="https://github.com/emberjs/ember.js/tree//packages/ember-metal/lib/platform.js#L135">packages/ember-metal/lib/platform.js:135</a>
+
+    
+
+    
+  </div>
+
+  
+    <div class="description">
+      <p>Set to true if the platform supports native getters and setters.</p>
+
+    </div>
+  
+
+  <p>
+    
+  </p>
+
+  
+
+  
+
+  
+</div>
+
+      
+    </div>
+  
+  </div>
+
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="footer-wrapper">
+        <div class="info">
+          Copyright 2017 <a href="http://tilde.io">Tilde Inc.</a><br>
+          Design by <a href="http://www.heropixel.com">HeroPixel</a><br>
+          <a href="/team">Core Team</a> | <a href="/sponsors">Project Sponsors</a>
+        </div>
+        <div class="statement">Ember.js is free, open source and always will be.</div>
+        <div class="links">
+          <a class="twitter" href="http://twitter.com/emberjs">Twitter</a>
+          <a class="github" href="https://github.com/emberjs/ember.js">GitHub</a>
+          <a class="googleplus" href="https://plus.google.com/communities/106387049790387471205">Google+</a>
+        </div>
+      </div>
+    </div>
+  
+</body></html>

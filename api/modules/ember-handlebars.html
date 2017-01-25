@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Ember.js - ember-handlebars</title>
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link href="../../stylesheets/site.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="../../stylesheets/highlight.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="http://emberjs.com/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/javascripts/common-old-ie.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="../../javascripts/common-modern.js"></script>
+<!--<![endif]-->
+
+    
+    <script type="text/javascript" src="../../javascripts/api.js"></script>
+  
+  </head>
+
+  <body class="api api_modules api_modules_ember-handlebars">
+    <div id="header">
+      <div id="wrapper">
+        <a id="logo" href="/">&nbsp;</a>
+        
+
+        <div id="github">
+          <a href="https://github.com/emberjs/ember.js"><img src="../../images/fork-us.png">Fork Us!</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="content-wrapper">
+      
+      
+        <div id="sidebar">
+          
+    <ol id="toc-list">
+      <li class="level-1">
+        <a href="#">Projects</a>
+        <ol>
+          
+          <li class="level-3 sub-selected">
+            <a href="/api">Ember</a>
+          </li>
+          
+          <li class="level-3 ">
+            <a href="../data">Ember Data</a>
+          </li>
+          
+        </ol>
+      </li>
+
+      <li class="level-1"><a href="https://github.com/emberjs/ember.js/commit/" target="_blank"> Tag: </a></li>
+
+      
+          <li class="level-1 selected">
+          
+        <a href="#">Modules</a>
+        
+          <ol class="selected">
+          
+          
+            
+          <li class="level-3 ">
+          
+              <a href="ember.html">ember</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="ember-application.html">ember-application</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="ember-debug.html">ember-debug</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 sub-selected">
+          
+              <a href="ember-handlebars.html">ember-handlebars</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="ember-metal.html">ember-metal</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="ember-routing.html">ember-routing</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="ember-runtime.html">ember-runtime</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="ember-states.html">ember-states</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="ember-views.html">ember-views</a>
+            
+          </li>
+        
+          
+        
+          </ol>
+        
+      
+          </li>
+        
+
+      
+          <li class="level-1 ">
+          
+        <a href="#">Namespaces</a>
+        
+          <ol class="">
+          
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.html">Ember</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Instrumentation.html">Ember.Instrumentation</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Location.html">Ember.Location</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.String.html">Ember.String</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.platform.html">Ember.platform</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.run.html">Ember.run</a>
+            
+          </li>
+        
+          
+        
+          </ol>
+        
+      
+          </li>
+        
+
+      
+          <li class="level-1 ">
+          
+        <a href="#">Classes</a>
+        
+          <ol class="">
+          
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Application.html">Ember.Application</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Array.html">Ember.Array</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.ArrayController.html">Ember.ArrayController</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.ArrayProxy.html">Ember.ArrayProxy</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Binding.html">Ember.Binding</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Button.html">Ember.Button</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Checkbox.html">Ember.Checkbox</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.CollectionView.html">Ember.CollectionView</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Comparable.html">Ember.Comparable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.ComputedProperty.html">Ember.ComputedProperty</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.ContainerView.html">Ember.ContainerView</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Controller.html">Ember.Controller</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.ControllerMixin.html">Ember.ControllerMixin</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Copyable.html">Ember.Copyable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.CoreObject.html">Ember.CoreObject</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Deferred.html">Ember.Deferred</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Descriptor.html">Ember.Descriptor</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.EachProxy.html">Ember.EachProxy</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Enumerable.html">Ember.Enumerable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Error.html">Ember.Error</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.EventDispatcher.html">Ember.EventDispatcher</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Evented.html">Ember.Evented</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Freezable.html">Ember.Freezable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Handlebars.html">Ember.Handlebars</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Handlebars.helpers.html">Ember.Handlebars.helpers</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.HashLocation.html">Ember.HashLocation</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.HistoryLocation.html">Ember.HistoryLocation</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Logger.html">Ember.Logger</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Map.html">Ember.Map</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.MapWithDefault.html">Ember.MapWithDefault</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Mixin.html">Ember.Mixin</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.MutableArray.html">Ember.MutableArray</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.MutableEnumerable.html">Ember.MutableEnumerable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Namespace.html">Ember.Namespace</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.NativeArray.html">Ember.NativeArray</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.NoneLocation.html">Ember.NoneLocation</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Object.html">Ember.Object</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.ObjectController.html">Ember.ObjectController</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.ObjectProxy.html">Ember.ObjectProxy</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Observable.html">Ember.Observable</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.OrderedSet.html">Ember.OrderedSet</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.RenderBuffer.html">Ember.RenderBuffer</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Route.html">Ember.Route</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Router.html">Ember.Router</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.RunLoop.html">Ember.RunLoop</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Select.html">Ember.Select</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.Set.html">Ember.Set</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.SortableMixin.html">Ember.SortableMixin</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.State.html">Ember.State</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.StateManager.html">Ember.StateManager</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.TargetActionSupport.html">Ember.TargetActionSupport</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.TextArea.html">Ember.TextArea</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.TextField.html">Ember.TextField</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.TextSupport.html">Ember.TextSupport</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember.View.html">Ember.View</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember._HandlebarsBoundView.html">Ember._HandlebarsBoundView</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember._Metamorph.html">Ember._Metamorph</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember._MetamorphView.html">Ember._MetamorphView</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Ember._SimpleMetamorphView.html">Ember._SimpleMetamorphView</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Function.html">Function</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/String.html">String</a>
+            
+          </li>
+        
+          
+            
+          <li class="level-3 ">
+          
+              <a href="../classes/Transition.html">Transition</a>
+            
+          </li>
+        
+          
+        
+          </ol>
+        
+      
+          </li>
+        
+  
+          <div id="back-to-top"><a id="back-top-top" href="#">⬆ Back to Top</a></div>
+        </ol></div>
+      
+      <div id="content" class="has-sidebar">
+          
+
+  
+  <h1 class="api-header">ember-handlebars Module</h1>
+
+<hr>
+
+  <p>Parent: <a href="ember.html">ember</a></p>
+
+  <p>Requires: <a href="ember-views.html">ember-views</a></p>
+
+<p></p><p>Ember Handlebars</p>
+<p></p>
+
+
+  
+  <h2>Classes and Namespaces</h2>
+  <ul>
+  
+    <li class="deprecated"><a href="../classes/Ember.Button.html">Ember.Button</a></li>
+  
+    <li class=""><a href="../classes/Ember.Checkbox.html">Ember.Checkbox</a></li>
+  
+    <li class=""><a href="../classes/Ember.Select.html">Ember.Select</a></li>
+  
+    <li class=""><a href="../classes/Ember.TextArea.html">Ember.TextArea</a></li>
+  
+    <li class=""><a href="../classes/Ember.TextField.html">Ember.TextField</a></li>
+  
+    <li class="private"><a href="../classes/Ember.TextSupport.html">Ember.TextSupport</a></li>
+  
+    <li class=""><a href="../classes/Ember.Handlebars.helpers.html">Ember.Handlebars.helpers</a></li>
+  
+    <li class=""><a href="../classes/Ember.Handlebars.html">Ember.Handlebars</a></li>
+  
+    <li class="private"><a href="../classes/Ember._HandlebarsBoundView.html">Ember._HandlebarsBoundView</a></li>
+  
+    <li class="private"><a href="../classes/Ember._Metamorph.html">Ember._Metamorph</a></li>
+  
+    <li class="private"><a href="../classes/Ember._MetamorphView.html">Ember._MetamorphView</a></li>
+  
+    <li class="private"><a href="../classes/Ember._SimpleMetamorphView.html">Ember._SimpleMetamorphView</a></li>
+  
+  </ul>
+
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="footer-wrapper">
+        <div class="info">
+          Copyright 2017 <a href="http://tilde.io">Tilde Inc.</a><br>
+          Design by <a href="http://www.heropixel.com">HeroPixel</a><br>
+          <a href="/team">Core Team</a> | <a href="/sponsors">Project Sponsors</a>
+        </div>
+        <div class="statement">Ember.js is free, open source and always will be.</div>
+        <div class="links">
+          <a class="twitter" href="http://twitter.com/emberjs">Twitter</a>
+          <a class="github" href="https://github.com/emberjs/ember.js">GitHub</a>
+          <a class="googleplus" href="https://plus.google.com/communities/106387049790387471205">Google+</a>
+        </div>
+      </div>
+    </div>
+  
+</body></html>
